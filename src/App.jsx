@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import EmpleadoRow from "./components/EmpleadoRow";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const empleados = [
+    { id: 1, nombre: "Laya Dueñas", cargo: "CEO", departamento: "Business", foto: 'mujer' },
+    { id: 2, nombre: "Astryd Vallés", cargo: "CMO", departamento: "Marketing", foto: 'mujer' },
+    { id: 3, nombre: "Shantell Meza", cargo: "CFO", departamento: "Business", foto: 'mujer' },
+    { id: 4, nombre: "Sergio Ocampo", cargo: "CTO", departamento: "Engineering", foto: 'varon' },
+    { id: 5, nombre: "Ares Jiménez", cargo: "Art Director", departamento: "Marketing", foto: 'varon' },
+    { id: 6, nombre: "Marta Pérez", cargo: "Frontend Dev", departamento: "Engineering", foto: 'mujer' }
+
+  ];
 
   return (
-    <>
+    <section className="container mt-5">
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        {empleados.map((empleado, index)=>(
+          <div key={index}>
+            <EmpleadoRow empleado={empleado} />
+          </div>
+        ))
+        }
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </section>
+  );
 }
 
-export default App
+export default App;

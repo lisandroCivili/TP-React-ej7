@@ -1,8 +1,11 @@
-# React + Vite
+# Lista de empleados
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Lista dividida en 4 componentes, en la cual se envian los datos de los empleados mediante un array y luego se mapea para que se muestren adecuadamente.
 
-Currently, two official plugins are available:
+## Link del sitio
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Lista de empleados]()
+
+## Autor
+
+Lisandro Civili
